@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billy Bob's Burgers & Subs Order Form</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: blue;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Billy Bob's Burgers & Subs</h1>
+    <p>Food with attitude</p>
+
+    <form  method="post" action="">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Create Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <p>Select your meal:</p>
+        <input type="radio" id="burger" name="meal" value="burger">
+        <label for="burger">Burger</label><br>
+        <input type="radio" id="sub" name="meal" value="sub">
+        <label for="sub">Sub</label><br>
+        <input type="radio" id="quesadilla" name="meal" value="quesadilla">
+        <label for="quesadilla">Quesadilla</label><br>
+
+        <label for="meatOptions">Choose your meat options:</label>
+        <select id="meatOptions" name="meatOptions">
+            <option value="beef">Beef</option>
+            <option value="chicken">Chicken</option>
+            <option value="veggie">Veggie</option>
+        </select>
+
+        <label>Choose your toppings:</label><br>
+        <input type="checkbox" id="lettuce" name="toppings" value="lettuce">
+        <label for="lettuce">Lettuce</label><br>
+        <input type="checkbox" id="tomato" name="toppings" value="tomato">
+        <label for="tomato">Tomato</label><br>
+        <input type="checkbox" id="onions" name="toppings" value="onions">
+        <label for="onions">Onions</label><br>
+        <input type="checkbox" id="cheese" name="toppings" value="cheese">
+        <label for="cheese">Cheese</label><br>
+        <input type="checkbox" id="bacon" name="toppings" value="bacon">
+        <label for="bacon">Bacon</label><br>
+
+        <label for="extras">Choose your extras:</label><br>
+        <div id="extras" style="margin-left: 20px;">
+            <input type="checkbox" id="extraCheese" name="extras[]" value="extraCheese">
+            <label for="extraCheese">Extra Cheese</label><br>
+            <input type="checkbox" id="extraBacon" name="extras[]" value="extraBacon">
+            <label for="extraBacon">Extra Bacon</label><br>
+        </div>
+
+        <input type="submit" value="Submit Order">
+    </form>
+</div>
+
+</body>
+</html>
